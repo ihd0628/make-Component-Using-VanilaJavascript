@@ -2,8 +2,9 @@ export default class Component {
   $target;
   $props;
   $state;
-  constructor($target) {
+  constructor($target, $props) {
     this.$target = $target;
+    this.$props = $props; // $props 할당
     this.setup();
     this.setEvent();
     this.render();
@@ -16,6 +17,7 @@ export default class Component {
   }
   render() {
     this.$target.innerHTML = this.templete();
+    this.mounted();
   }
   setEvent() {}
   setState(newState) {
