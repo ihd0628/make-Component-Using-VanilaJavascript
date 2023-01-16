@@ -1,3 +1,5 @@
+import { observable, observe } from "../stateManagement/observer.js";
+
 export default class Component {
   $target;
   $props;
@@ -11,6 +13,7 @@ export default class Component {
   }
 
   setup() {}
+
   mounted() {}
   templete() {
     return "";
@@ -31,7 +34,6 @@ export default class Component {
     // closest를 이용하여 처리한다.
     const isTarget = (target) =>
       children.includes(target) || target.closest(selector);
-    console.log(children);
     this.$target.addEventListener(eventType, (event) => {
       if (!isTarget(event.target)) return false;
       callback(event);

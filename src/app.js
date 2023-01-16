@@ -2,6 +2,8 @@ import Items from "./components/Items.js";
 import Component from "./core/Component.js";
 import ItemAppender from "./components/ItemAppender.js";
 import ItemFilter from "./components/ItemFilter.js";
+import { observable } from "./stateManagement/observer.js";
+import { store } from "./store.js";
 
 export default class App extends Component {
   setup() {
@@ -27,6 +29,8 @@ export default class App extends Component {
       <header data-component = 'item-appender'></header>
       <main data-component = 'items'></main>
       <footer data-component = 'item-filter'></footer>
+      중앙 상태 관리 a : ${store?.a}</br>
+      중앙 상태 관리 b : ${store?.b}</br>
     `;
   }
 
@@ -39,7 +43,6 @@ export default class App extends Component {
     const $itemFilter = this.$target.querySelector(
       '[data-component="item-filter"]'
     );
-
     new ItemAppender($itemAppender, {
       addItem: addItem.bind(this),
     });
@@ -71,6 +74,7 @@ export default class App extends Component {
     this.setState({
       items: [...items, { seq, contents, active }],
     });
+    store.setState({ b: 400 });
   }
 
   deleteItem(seq) {
