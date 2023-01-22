@@ -1,0 +1,23 @@
+{
+  "name": "make-component-using-vanila-javascript",
+  "version": "1.0.0",
+  "description": "vanilaJavascript 를 사용하여 컴포넌트 만들기 (+ vanilaJavascript 사용하여 중앙 상태관리 시스템 만들기)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server --port=3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihd0628/make-Component-Using-VanilaJavascript.git"
+  },
+  "author": "lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihd0628/make-Component-Using-VanilaJavascript/issues"
+  },
+  "homepage": "https://github.com/ihd0628/make-Component-Using-VanilaJavascript#readme",
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
+}
