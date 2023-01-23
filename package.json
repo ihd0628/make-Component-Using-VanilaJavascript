@@ -19,5 +19,8 @@
   "homepage": "https://github.com/ihd0628/make-Component-Using-VanilaJavascript#readme",
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
   }
 }
